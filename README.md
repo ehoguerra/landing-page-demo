@@ -1,59 +1,79 @@
-# Amostra de landing page
+# Casa Serena — responsive landing page
 
-Casa Serena é uma marca fictícia usada para demonstrar uma página de serviços. A ilustração foi criada para esta amostra. Não representa cliente real ou trabalho contratado.
+[![Tests](https://github.com/ehoguerra/landing-page-demo/actions/workflows/tests.yml/badge.svg)](https://github.com/ehoguerra/landing-page-demo/actions/workflows/tests.yml)
 
-HTML, CSS e JavaScript sem dependências, com layout responsivo, navegação por seções, perguntas frequentes e prévia de contato. O conteúdo em português é ilustrativo.
+A complete, dependency-free landing-page concept for a fictional interiors studio. Editorial typography, a warm palette and an original SVG room illustration support a simple journey from services to contact.
 
-## Prévia visual / Visual preview
+**HTML · CSS · JavaScript modules · No build step · MIT**
 
-Capturas reais da página executada localmente. Marca fictícia; estas imagens não representam um projeto de cliente nem uma página comercial publicada.
-
-Actual screenshots of the locally running demonstration. Open an image to inspect it at full size.
-
-![Página completa no desktop, com marca fictícia Casa Serena](preview/desktop.png)
+![Casa Serena: actual desktop screenshot](preview/desktop.png)
 
 <details>
-<summary>Ver versão de celular / View mobile version (390 px)</summary>
+<summary>Mobile screenshot — 390 px</summary>
 
-<img src="preview/mobile.png" alt="Página completa adaptada para celular, marca fictícia Casa Serena" width="390">
+<img src="preview/mobile.png" alt="Casa Serena single-column mobile layout" width="390">
 
 </details>
 
-## English overview
+These are actual screenshots of the local demo. Casa Serena is a fictional brand and this is a self-directed portfolio project.
 
-An original responsive landing-page demonstration for a fictional interiors brand. This is a self-directed sample, not a client case study. It uses plain HTML, CSS and JavaScript modules, with an original inline SVG illustration and no external fonts, tracking or packages.
+## Preview in one command
 
-To preview it, download the source, open a terminal in the extracted folder, run `python3 -m http.server 8847 --bind 127.0.0.1`, and visit `http://127.0.0.1:8847`. Run the contact-link tests with `node --test contact.test.mjs`.
-
-Contact buttons open a demonstration dialog. No real phone number is configured and no messages are sent. The page was developed with AI assistance; commercial use requires the responsible person's review and the client's approved content and contact details.
-
-## Abrir localmente
-
-Na pasta extraída, execute:
+From the repository directory:
 
 ```sh
 python3 -m http.server 8847 --bind 127.0.0.1
 ```
 
-Abra http://127.0.0.1:8847. O servidor local é necessário para carregar os módulos JavaScript; abrir o HTML diretamente pode bloquear esses módulos.
+Open [localhost:8847](http://127.0.0.1:8847). A local HTTP server is needed for JavaScript modules; opening the HTML as a file may block them. No dependencies, external fonts, analytics or third-party scripts are loaded.
 
-## Adaptar para um cliente
+## What the page demonstrates
 
-- `index.html`: conteúdo, ilustração, título e descrição.
-- `style.css`: cores, tipografia e adaptação ao tamanho de tela.
-- `config.mjs`: telefone internacional autorizado e mensagem inicial de WhatsApp.
-- `app.mjs` e `contact.mjs`: comportamento do contato.
+| Area | Implementation |
+| --- | --- |
+| Layout | Two-column hero, service grid, process, native FAQ and contact section |
+| Responsive behavior | Layout changes at 900 px and 640 px; fluid headline sizing |
+| Visual identity | CSS color tokens, system font stacks and inline SVG illustration |
+| Keyboard interaction | Skip link, visible focus, native disclosure and modal dialog |
+| Motion preferences | Smooth scrolling disabled when reduced motion is requested |
+| Contact configuration | Pure URL builder, separate configuration and DOM wiring |
 
-O telefone está vazio. Os botões abrem um aviso de demonstração e não enviam mensagens. Antes de publicar uma versão contratada, substituir a marca e os materiais fictícios, configurar o número autorizado, revisar os avisos de demonstração e a diretiva `noindex,nofollow`, e validar conteúdo e hospedagem com o cliente. Não inserir dados reais nesta amostra pública sem autorização.
+The default contact buttons open a local preview dialog. No phone number is configured and no message is sent. With JavaScript disabled, section navigation and the FAQ remain available; a visible fallback explains the contact preview.
 
-## Validação realizada
+## Code map
 
-Três testes automatizados da URL de WhatsApp passaram: destino ausente, codificação da mensagem e rejeição de formatos inválidos. Execute novamente com:
+```text
+index.html          Semantic sections, illustration and native dialog
+style.css           Tokens, components and responsive breakpoints
+config.mjs          Contact number and message
+contact.mjs         Pure WhatsApp URL builder
+app.mjs             Contact link / demonstration dialog behavior
+contact.test.mjs    URL validation and encoding tests
+preview/            Actual desktop and mobile screenshots
+```
+
+## Customize
+
+1. Replace the fictional copy and illustration in `index.html` with approved content.
+2. Adjust the color tokens at the top of `style.css`; component styles and breakpoints follow below.
+3. Set an authorized international phone number and message in `config.mjs`. The URL builder accepts common formatting and validates the resulting digits. It does not verify number ownership or whether WhatsApp has an account for it.
+4. Review demonstration notices and `noindex, nofollow` before publishing a real business version.
+
+Opening a configured link takes a visitor to WhatsApp with a message draft. This code does not send it automatically.
+
+## Test
+
+Requires Node.js 22 or newer; no package installation is needed.
 
 ```sh
 node --test contact.test.mjs
+node --check app.mjs
 ```
 
-Layout inspecionado no navegador em desktop e celular; sem transbordamento horizontal nas larguras de 320 e 390 pixels. Abertura do aviso, fechamento com Escape, retorno de foco e abertura de pergunta frequente foram conferidos. Não houve envio real de WhatsApp, implantação de site público, auditoria completa de acessibilidade ou teste em todos os navegadores. O código pode ser consultado publicamente como amostra; isso não representa uma implantação comercial.
+Six tests cover an absent or malformed number, message encoding, invalid message types, empty messages, emojis and reserved characters. [GitHub Actions](https://github.com/ehoguerra/landing-page-demo/actions/workflows/tests.yml) runs the checks on Node.js 22 and 24.
 
-Página estática, sem dependências externas ou rastreamento. Desenvolvimento com assistência de IA e revisão humana pelo responsável antes de uso comercial.
+See [validation notes](VALIDATION.md) for browser evidence and limits. See [design notes](DESIGN.md) for the visual and interaction decisions.
+
+## Em português
+
+Amostra de landing page para uma marca fictícia de interiores, com conteúdo em português. Para abrir, execute o servidor local acima. O telefone fica vazio por padrão: os botões exibem uma prévia, sem contato externo. Código, ilustração e documentação estão disponíveis sob a [licença MIT](LICENSE).

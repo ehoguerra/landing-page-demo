@@ -17,3 +17,22 @@ test('rejeita telefone curto, longo ou com caracteres não telefônicos', () => 
     assert.equal(whatsappUrl(phone, 'Olá'), null, phone);
   }
 });
+
+test('rejeita mensagem de tipo inválido sem lançar exceção', () => {
+  for (const message of [null, 123, {}, Symbol('invalid')]) {
+    assert.equal(whatsappUrl('+55 (11) 91234-5678', message), null);
+  }
+});
+
+test('usa mensagem vazia por padrão', () => {
+  const url = new URL(whatsappUrl('+5511912345678'));
+  assert.equal(url.searchParams.get('text'), '');
+});
+
+test('preserva emojis e caracteres reservados sem criar novos parâmetros', () => {
+  const message = 'Olá 🌿\nEspaço + luz? #projeto & orçamento=sim';
+  const url = new URL(whatsappUrl('+5511912345678', message));
+  assert.equal(url.searchParams.get('text'), message);
+  assert.deepEqual([...url.searchParams.keys()], ['text']);
+  assert.equal(url.hash, '');
+});
