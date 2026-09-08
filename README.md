@@ -4,6 +4,21 @@ Casa Serena é uma marca fictícia usada para demonstrar uma página de serviço
 
 HTML, CSS e JavaScript sem dependências, com layout responsivo, navegação por seções, perguntas frequentes e prévia de contato. O conteúdo em português é ilustrativo.
 
+## Prévia visual / Visual preview
+
+Capturas reais da página executada localmente. Marca fictícia; estas imagens não representam um projeto de cliente nem uma página comercial publicada.
+
+Actual screenshots of the locally running demonstration. Open an image to inspect it at full size.
+
+![Página completa no desktop, com marca fictícia Casa Serena](preview/desktop.png)
+
+<details>
+<summary>Ver versão de celular / View mobile version (390 px)</summary>
+
+<img src="preview/mobile.png" alt="Página completa adaptada para celular, marca fictícia Casa Serena" width="390">
+
+</details>
+
 ## English overview
 
 An original responsive landing-page demonstration for a fictional interiors brand. This is a self-directed sample, not a client case study. It uses plain HTML, CSS and JavaScript modules, with an original inline SVG illustration and no external fonts, tracking or packages.
