@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstração de landing page para serviços: apresentação, processo e contato. Marca e conteúdo ilustrativos.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#163e45">
+  <title>Casa Serena — demonstração de landing page</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <div class="demo-banner">Amostra de layout <span>Marca, serviços e ilustração fictícios. Não é um projeto de cliente.</span></div>
+  <header class="header wrap">
+    <a class="brand" href="#" aria-label="Casa Serena — início"><span class="brand-icon" aria-hidden="true">c<span>s</span></span>Casa Serena</a>
+    <nav aria-label="Navegação principal"><a href="#servicos">O que fazemos</a><a href="#processo">Como funciona</a><a class="nav-contact" href="#contato">Vamos conversar</a></nav>
+  </header>
+  <main id="conteudo">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="intro">Interiores para a vida real</p>
+        <h1 id="hero-title">Seu espaço.<br>Seu jeito de viver.</h1>
+        <p class="lead">Uma casa que acolhe a sua rotina. Vamos pensar juntos nas cores, nos móveis e nos detalhes que fazem sentido para você.</p>
+        <a class="button" data-contact href="#contato">Conversar sobre meu espaço <span aria-hidden="true">↗</span></a>
+        <p class="small-note">O primeiro passo é uma conversa.</p>
+      </div>
+      <figure class="room">
+        <svg viewBox="0 0 560 620" role="img" aria-labelledby="room-title room-desc" xmlns="http://www.w3.org/2000/svg">
+          <title id="room-title">Ilustração de uma sala com sofá, plantas e luz natural</title>
+          <desc id="room-desc">Composição vetorial criada para esta amostra. Não representa um ambiente ou trabalho realizado.</desc>
+          <defs>
+            <pattern id="rug" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#d2b495"/><path d="M0 1h10M0 6h10" stroke="#c0a085" stroke-width="1"/></pattern>
+            <linearGradient id="wall" x2="1" y2="1"><stop stop-color="#e9d9c9"/><stop offset="1" stop-color="#d1baa4"/></linearGradient>
+          </defs>
+          <rect width="560" height="620" fill="url(#wall)"/>
+          <path d="M365 0h195v480H365z" fill="#d9c6b1"/>
+          <path d="M0 473h560v147H0z" fill="#c19c78"/>
+          <path d="M0 478h560M0 538h560M0 598h560M95 478v60m205 0v60m170-120v60M140 598v22" fill="none" stroke="#ac8766"/>
+          <rect x="340" y="42" width="176" height="290" rx="88" fill="#f4f1df"/>
+          <path d="M428 42v290M340 168h176M340 240h176" stroke="#b49a80" stroke-width="8"/>
+          <path d="m344 336 170 1 46 202H160z" fill="#fff9db" opacity=".2"/>
+          <rect x="65" y="78" width="158" height="195" fill="#927352"/>
+          <rect x="73" y="86" width="142" height="179" fill="#f1e6d3"/>
+          <path d="M107 225V150a36 36 0 0 1 72 0v75" fill="#6c8b79"/>
+          <circle cx="179" cy="126" r="21" fill="#d69572"/>
+          <ellipse cx="277" cy="551" rx="222" ry="42" fill="url(#rug)"/>
+          <rect x="89" y="345" width="307" height="137" rx="32" fill="#9b9d75"/>
+          <rect x="104" y="359" width="132" height="90" rx="21" fill="#aeb38a"/>
+          <rect x="245" y="359" width="134" height="90" rx="21" fill="#aeb38a"/>
+          <rect x="84" y="435" width="318" height="56" rx="15" fill="#8c916a"/>
+          <rect x="69" y="410" width="37" height="83" rx="15" fill="#989e77"/>
+          <rect x="379" y="410" width="37" height="83" rx="15" fill="#989e77"/>
+          <path d="M102 493v24m281-24v24" stroke="#705440" stroke-width="12"/>
+          <rect x="117" y="381" width="59" height="59" rx="8" fill="#f2e6d3" transform="rotate(-12 146 410)"/>
+          <rect x="305" y="385" width="61" height="58" rx="9" fill="#c17659" transform="rotate(9 335 414)"/>
+          <path d="M247 515v55m91-55v55" stroke="#79533d" stroke-width="12"/>
+          <ellipse cx="291" cy="510" rx="82" ry="22" fill="#94674b"/>
+          <ellipse cx="291" cy="502" rx="82" ry="22" fill="#b48662"/>
+          <rect x="282" y="481" width="29" height="20" rx="5" fill="#ece6d6"/>
+          <ellipse cx="296" cy="481" rx="14" ry="4" fill="#72624d"/>
+          <path d="M477 410v-170m0 88-31-44m31 81 32-49m-32-32 20-40" stroke="#4b664d" stroke-width="5" fill="none"/>
+          <g fill="#557356"><ellipse cx="438" cy="274" rx="14" ry="29" transform="rotate(-35 438 274)"/><ellipse cx="512" cy="310" rx="15" ry="32" transform="rotate(35 512 310)"/><ellipse cx="499" cy="243" rx="12" ry="27" transform="rotate(24 499 243)"/><ellipse cx="476" cy="234" rx="12" ry="27"/></g>
+          <path d="M447 401h61l-9 81h-43z" fill="#b57654"/>
+          <ellipse cx="477" cy="401" rx="31" ry="8" fill="#956041"/>
+        </svg>
+        <figcaption>Conceito ilustrativo <span>Calma nos detalhes.</span></figcaption>
+      </figure>
+    </section>
+    <section class="services wrap" id="servicos" aria-labelledby="services-title">
+      <div class="section-heading"><h2 id="services-title">Um novo olhar<br>para o seu lugar.</h2><p>Do ambiente inteiro àquela decisão que ficou para depois: escolha o ponto de partida.</p></div>
+      <div class="service-grid">
+        <article><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 50V25L32 8l22 17v25H10Zm14 0V33h16v17"/></svg><h3>Projeto de interiores</h3><p>Layout, materiais e mobiliário pensados em conjunto, a partir das necessidades do seu espaço.</p></article>
+        <article><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="27" cy="27" r="17"/><path d="m40 40 14 14M18 27h18m-9-9v18"/></svg><h3>Consultoria pontual</h3><p>Uma orientação para destravar escolhas: cores, disposição dos móveis ou composição de um ambiente.</p></article>
+        <article><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 49h44V21H10v28Zm7-28v-8h30v8M21 29h22m-22 9h14"/></svg><h3>Plano de transformação</h3><p>Prioridades organizadas por etapa, para entender o que fazer primeiro e o que pode esperar.</p></article>
+      </div>
+    </section>
+    <section class="process" id="processo" aria-labelledby="process-title"><div class="wrap process-inner">
+      <div><p class="intro">Uma etapa de cada vez</p><h2 id="process-title">Tudo começa<br>com escuta.</h2><p>Você conta o que precisa. A proposta nasce dessa conversa, com escopo e próximos passos claros.</p></div>
+      <ol><li><h3>Conte sobre seu espaço</h3><p>Seu momento, suas ideias e o que você gostaria de mudar.</p></li><li><h3>Receba uma proposta</h3><p>Entregas, prazo e investimento definidos antes de começar.</p></li><li><h3>Veja as ideias tomarem forma</h3><p>Desenvolvimento e ajustes dentro do que combinamos.</p></li></ol>
+    </div></section>
+    <section class="faq wrap" aria-labelledby="faq-title"><h2 id="faq-title">Antes de conversar.</h2><div>
+      <details><summary>Preciso mudar a casa toda?</summary><p>O projeto pode partir de um único ambiente. O escopo é definido na conversa inicial, conforme a sua necessidade.</p></details>
+      <details><summary>Já preciso ter referências?</summary><p>Se tiver, elas ajudam a mostrar o que você gosta. Também podemos começar pelo que funciona e pelo que incomoda no seu espaço.</p></details>
+      <details><summary>Como recebo o orçamento?</summary><p>Após entender o ambiente e as entregas desejadas, apresentamos uma proposta para você avaliar antes da contratação.</p></details>
+    </div></section>
+    <section class="contact wrap" id="contato" aria-labelledby="contact-title"><div><h2 id="contact-title">Vamos dar espaço<br>às suas ideias?</h2><p>Conte o que você tem em mente.</p></div><a class="button button-light" data-contact href="#demo-info">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="wrap footer"><span class="brand">Casa Serena</span><p id="demo-info">Demonstração independente. Botões abrem uma prévia local; nenhum contato é enviado.</p></footer>
+  <dialog id="demo-dialog" aria-labelledby="dialog-title"><form method="dialog"><button class="close" aria-label="Fechar demonstração">×</button><p class="intro">Prévia do contato</p><h2 id="dialog-title">Aqui começa a conversa.</h2><p>Na página final, este botão abre o WhatsApp autorizado da empresa, com uma mensagem pronta.</p><blockquote>Olá! Gostaria de conversar sobre um projeto de interiores.</blockquote><p class="small-note">Esta amostra não contém um telefone real e não envia mensagens.</p><button class="button">Voltar à página</button></form></dialog>
+  <noscript><p class="wrap">Esta é uma demonstração sem número de contato. O JavaScript é necessário para abrir a prévia do botão.</p></noscript>
+</body>
+</html>
